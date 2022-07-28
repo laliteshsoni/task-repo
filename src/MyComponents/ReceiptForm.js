@@ -10,26 +10,26 @@ const ReceiptForm = ({ addReceipt }) => {
     const [paymode, setPaymode] = useState("Cash");
     const [remark, setRemark] = useState("");
 
-    // document.onkeydown = e => {
-    //     e.preventDefault();
+    document.onkeydown = e => {
+        // e.preventDefault();
 
-    //     let charCode = String.fromCharCode(e.which).toLowerCase()
+        let charCode = String.fromCharCode(e.which).toLowerCase()
 
-    //     if ((e.ctrlKey || e.metaKey) && charCode === 's') {
-    //         // console.log('call here your submit function')
-    //         submit(e);
-    //     }
-    //     if (e.key === "Escape") { 
-    //         // console.log("call here cancel func") 
-    //         close(e);
-    //     }
-    // }
+        if ((e.ctrlKey || e.metaKey) && charCode === 's') {
+            // console.log('call here your submit function')
+            submit(e);
+        }
+        else if (e.key === "Escape") { 
+            // console.log("call here cancel func") 
+            close(e);
+        }
+    }
 
 
     const close = (e) => {
         setDate("");
         setAmount("");
-        setPaymode("");
+        setPaymode("Cash");
         setRemark("");
     }
 
@@ -49,19 +49,19 @@ const ReceiptForm = ({ addReceipt }) => {
             <h5><ins>Receipt Details</ins></h5>
             <form onSubmit={submit}>
                 <div className="row mb-3">
-                    <label htmlFor="date" className="col-sm-2 col-form-label">Date</label>
+                    <label htmlFor="date" className="col-sm-2 col-form-label">Date<span className='redStar'>*</span></label>
                     <div className="col-sm-3">
                         <input type="text" value={date} onChange={(e) => { setDate(e.target.value) }} className="form-control" id="date" placeholder="Enter Date" required />
                     </div>
                 </div>
                 <div className="row mb-3">
-                    <label htmlFor="amount" className="col-sm-2 col-form-label">Amount</label>
+                    <label htmlFor="amount" className="col-sm-2 col-form-label">Amount<span className='redStar'>*</span></label>
                     <div className="col-sm">
                         <input type="text" value={amount} onChange={(e) => { setAmount(e.target.value) }} className="form-control" id="amount" placeholder="Enter Amount (in INR)" required />
                     </div>
                 </div>
                 <div className="row mb-3">
-                    <label htmlFor="paymode" className="col-sm-2 col-form-label">Payment Mode</label>
+                    <label htmlFor="paymode" className="col-sm-2 col-form-label">Payment Mode<span className='redStar'>*</span></label>
                     <div className="col-sm-6">
                         <select className="form-select" value={paymode} onChange={(e) => { setPaymode(e.target.value) }} id="paymode" required>
                             <option value="Cash">Cash</option>
