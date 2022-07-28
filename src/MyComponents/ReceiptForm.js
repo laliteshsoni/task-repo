@@ -10,20 +10,20 @@ const ReceiptForm = ({ addReceipt }) => {
     const [paymode, setPaymode] = useState("Cash");
     const [remark, setRemark] = useState("");
 
-    document.onkeydown = e => {
-        e.preventDefault();
+    // document.onkeydown = e => {
+    //     e.preventDefault();
 
-        let charCode = String.fromCharCode(e.which).toLowerCase()
+    //     let charCode = String.fromCharCode(e.which).toLowerCase()
 
-        if ((e.ctrlKey || e.metaKey) && charCode === 's') {
-            // console.log('call here your submit function')
-            submit(e);
-        }
-        if (e.key === "Escape") { 
-            // console.log("call here cancel func") 
-            close(e);
-        }
-    }
+    //     if ((e.ctrlKey || e.metaKey) && charCode === 's') {
+    //         // console.log('call here your submit function')
+    //         submit(e);
+    //     }
+    //     if (e.key === "Escape") { 
+    //         // console.log("call here cancel func") 
+    //         close(e);
+    //     }
+    // }
 
 
     const close = (e) => {
@@ -77,7 +77,7 @@ const ReceiptForm = ({ addReceipt }) => {
                 </div>
                 <div className='d-grid gap-4 d-flex justify-content-md-end'>
                     <button type='button' className="btn btn-outline-danger" onClick={(e) => close(e)} >CANCEL <br /><ins>(Esc)</ins></button>
-                    <button type="submit" className="btn btn-success">SUBMIT <br /><ins>( <img src='/command-symbol.png' height={15} width={15} alt="sorry"/>   S)</ins></button>
+                    <button type="submit" className="btn btn-success">SUBMIT <br /><ins>( <img src='/command-symbol.png' height={15} width={15} alt="sorry" />   S)</ins></button>
                 </div>
             </form>
         </div>
