@@ -77,7 +77,7 @@ const ReceiptForm = ({ addReceipt }) => {
                 </div>
                 <div className='d-grid gap-4 d-flex justify-content-md-end'>
                     <button type='button' className="btn btn-outline-danger" onClick={(e) => close(e)} >CANCEL <br /><ins>(Esc)</ins></button>
-                    <button type="submit" className="btn btn-success">SUBMIT <br /><ins>( <img src='/command-symbol.png' height={15} width={15} alt="sorry" />  S)</ins></button>
+                    <button type="submit" className="btn btn-success">SUBMIT <br /><ins>( <img src='/command-symbol.png' height={15} width={15} alt="sorry"/>   S)</ins></button>
                 </div>
             </form>
         </div>
