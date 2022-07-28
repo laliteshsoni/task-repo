@@ -19,18 +19,18 @@ function App() {
   }
 
   const [receipts, setReceipts] = useState([
-    {
-      date: "28/07/22",
-      amount: "350",
-      payMode: "Cash",
-      remarks: "this is remark"
-    },
-    {
-      date: "2/07/22",
-      amount: "50",
-      payMode: "Cash",
-      remarks: "here is remark"
-    }
+    // {
+    //   date: "28/07/22",
+    //   amount: "350",
+    //   payMode: "Cash",
+    //   remarks: "this is remark"
+    // },
+    // {
+    //   date: "2/07/22",
+    //   amount: "50",
+    //   payMode: "Cash",
+    //   remarks: "here is remark"
+    // }
   ]);
  
   return (
